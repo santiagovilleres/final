@@ -1,0 +1,156 @@
+body{
+    font-family:Roboto,sans-serif;
+    margin: 0; /*para que no haya margen defoult*/
+    padding: 0;
+    box-sizing: border-box; /*Para que las cajas tengan el tamaño del height y width correcto y no con el padding y border sumados */
+}
+
+.container{
+    background-color: #efefef;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 1fr 100px;
+    grid-template-areas: 'header header'
+                         'main main'
+                         'footer footer' ;
+}
+
+
+.header {
+    position: sticky;
+    color: #ffffff;
+    background-color: #5c5c5c; /* Fondo sólido */
+    display: flex;
+    justify-content: space-evenly; /*alinear en eje y*/
+    align-items: center; /*alinear en eje x*/
+    top: 0;
+    grid-area: header;
+}
+
+.inicio{
+    grid-area: inicio;
+}
+
+.main{
+    grid-area: main;
+}
+
+.servicios{
+    grid-area: servicios;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:  repeat(3, 150px);
+    grid-template-areas: 'pista baliza'
+                         'funcion extenciones'
+                         'combustible .';
+}
+.servicios div {
+    gap: 100px; /* Espaciado entre el icono y el texto */
+}
+.pista,
+.baliza,
+.funcion,
+.extenciones,
+.combustible {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 100px;
+}
+
+.servicios h3 {
+    margin: 0; /* Elimina el margen predeterminado de los títulos */
+}
+
+.pista{
+    grid-area: pista;
+}
+
+.baliza{
+    grid-area: baliza;
+}
+
+.funcion{
+    grid-area: funcion;
+}
+
+.extenciones{
+    grid-area: extenciones;
+}
+
+.combustible{
+    grid-area: combustible;
+}
+
+.informacion{
+    padding: 100px 100px 0px 100px;
+
+}
+
+.contacto{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #5c5c5c;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    gap: 30px; /*???? Puse esto porque si no me queda todo junto*/
+}
+
+.header a{
+    text-decoration: none; /*le saco los estilos de link*/ 
+    color: #ffffff;
+}
+
+.header a:hover{
+    color: rgb(209, 209, 209);
+}
+
+.header li{
+    list-style-type: none; /*le saco los estilos a los items de la lista*/
+}
+
+.header img{
+    height: 30px; /*tamaño logo inicio*/
+}
+
+.inicio{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.inicio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicios img{
+    height: 70px; /*tamaño iconos de servicios*/
+}
+
+.header h1{
+    margin: 0;
+}
